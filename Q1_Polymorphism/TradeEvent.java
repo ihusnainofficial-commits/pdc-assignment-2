@@ -1,5 +1,4 @@
 public class TradeEvent {
-
     protected String senderId;
     protected long timestamp;
     protected double basePrice;
@@ -8,5 +7,12 @@ public class TradeEvent {
         this.senderId = senderId;
         this.timestamp = timestamp;
         this.basePrice = basePrice;
+    }
+
+    public void dispatch() {
+        System.out.println("[TradeEvent] Generic event");
+        System.out.println("  Sender    : " + senderId);
+        System.out.println("  Timestamp : " + timestamp);
+        System.out.println("  Base price: " + basePrice);
     }
 }
