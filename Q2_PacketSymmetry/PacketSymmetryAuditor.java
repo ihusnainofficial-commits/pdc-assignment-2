@@ -19,4 +19,17 @@ public class PacketSymmetryAuditor {
         }
         return true;
     }
+
+    public static void main(String[] args) {
+        String[] payloads = {"ABCCBA", "LEVEL", "PACKET", "RADAR"};
+
+        System.out.println("=== Packet Symmetry Audit (Stack LIFO vs Queue FIFO) ===");
+        for (String payload : payloads) {
+            boolean symmetric = isSymmetric(payload);
+            System.out.println("Payload: " + payload
+                    + "  ->  " + (symmetric
+                            ? "PALINDROME - bi-directional symmetry VERIFIED"
+                            : "NOT PALINDROME - symmetry FAILED"));
+        }
+    }
 }
