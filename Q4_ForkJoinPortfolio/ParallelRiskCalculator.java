@@ -6,4 +6,10 @@ public class ParallelRiskCalculator extends RecursiveTask<Double> {
     private double[] assets;
     private int start;
     private int end;
+
+    public ParallelRiskCalculator(double[] assets, int start, int end) {
+        this.assets = assets;
+        this.start = start;
+        this.end = end;
+    }
 }
