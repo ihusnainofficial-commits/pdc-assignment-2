@@ -11,4 +11,12 @@ public class InventoryCatalogManager {
     private static final int THREADS = 10;
     private static final int OPERATIONS = 50000;
     private static final int PRODUCTS = 1000;
+
+    private static Map<String, Integer> freshCatalog() {
+        Map<String, Integer> catalog = new HashMap<>();
+        for (int i = 0; i < PRODUCTS; i++) {
+            catalog.put("PROD-" + i, 100);
+        }
+        return catalog;
+    }
 }
