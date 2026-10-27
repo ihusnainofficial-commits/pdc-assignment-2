@@ -1,5 +1,4 @@
 public abstract class SensorSearchEngine {
-
     protected double[] sensorData;
     protected int startIdx;
     protected int endIdx;
@@ -9,4 +8,6 @@ public abstract class SensorSearchEngine {
         this.startIdx = startIdx;
         this.endIdx = endIdx;
     }
+
+    public abstract double processGrid();
 }
